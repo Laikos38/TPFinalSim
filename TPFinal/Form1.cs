@@ -364,9 +364,9 @@ namespace TPFinal
                 DifferentToZero(stateRow.NextEndTravel),
                 ShovelStatusToString(stateRow.Shovel.Status),
                 stateRow.Shovel.TruckQueue.Count,
-                stateRow.Stat1,
-                stateRow.Stat2,
-                stateRow.Stat3
+                TruncateToFour(stateRow.Stat1),
+                TruncateToFour(stateRow.Stat2),
+                TruncateToFour(stateRow.Stat3)
             );
 
             int rowCount = dgv.Rows.Count;

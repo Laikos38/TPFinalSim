@@ -31,6 +31,9 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.lblFinalWatchSim3 = new System.Windows.Forms.Label();
+            this.lblFinalWatchSim2 = new System.Windows.Forms.Label();
+            this.lblFinalWatchSim1 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.txtInactivityTimeSim3 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -57,6 +60,8 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCleanPreviousResults = new System.Windows.Forms.Button();
             this.dgvPreviousResults = new System.Windows.Forms.DataGridView();
+            this.colTruckQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSimulate = new System.Windows.Forms.Button();
             this.btnCleanParameters = new System.Windows.Forms.Button();
@@ -124,11 +129,6 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTruckQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblFinalWatchSim1 = new System.Windows.Forms.Label();
-            this.lblFinalWatchSim2 = new System.Windows.Forms.Label();
-            this.lblFinalWatchSim3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -210,6 +210,33 @@
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultados simulación actual";
+            // 
+            // lblFinalWatchSim3
+            // 
+            this.lblFinalWatchSim3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFinalWatchSim3.AutoSize = true;
+            this.lblFinalWatchSim3.Location = new System.Drawing.Point(642, 189);
+            this.lblFinalWatchSim3.Name = "lblFinalWatchSim3";
+            this.lblFinalWatchSim3.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim3.TabIndex = 72;
+            // 
+            // lblFinalWatchSim2
+            // 
+            this.lblFinalWatchSim2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFinalWatchSim2.AutoSize = true;
+            this.lblFinalWatchSim2.Location = new System.Drawing.Point(378, 189);
+            this.lblFinalWatchSim2.Name = "lblFinalWatchSim2";
+            this.lblFinalWatchSim2.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim2.TabIndex = 71;
+            // 
+            // lblFinalWatchSim1
+            // 
+            this.lblFinalWatchSim1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblFinalWatchSim1.AutoSize = true;
+            this.lblFinalWatchSim1.Location = new System.Drawing.Point(114, 189);
+            this.lblFinalWatchSim1.Name = "lblFinalWatchSim1";
+            this.lblFinalWatchSim1.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim1.TabIndex = 70;
             // 
             // label17
             // 
@@ -493,6 +520,20 @@
             this.dgvPreviousResults.Size = new System.Drawing.Size(228, 214);
             this.dgvPreviousResults.TabIndex = 9;
             // 
+            // colTruckQuantity
+            // 
+            this.colTruckQuantity.HeaderText = "Cant. Camiones";
+            this.colTruckQuantity.Name = "colTruckQuantity";
+            this.colTruckQuantity.ReadOnly = true;
+            this.colTruckQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
+            // colResult
+            // 
+            this.colResult.HeaderText = "% Tiempo inactivo pala";
+            this.colResult.Name = "colResult";
+            this.colResult.ReadOnly = true;
+            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            // 
             // groupBox1
             // 
             this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
@@ -612,7 +653,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.95973F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.04027F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 84F));
             this.tableLayoutPanel2.Controls.Add(this.lblTo, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtFrom, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblQuantity, 0, 0);
@@ -713,7 +754,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(941, 485);
+            this.tabPage2.Size = new System.Drawing.Size(1084, 495);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Simulación 1";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -726,7 +767,6 @@
             this.dgvResultsSim1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvResultsSim1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResultsSim1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultsSim1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colIteration,
@@ -748,7 +788,7 @@
             this.dgvResultsSim1.ReadOnly = true;
             this.dgvResultsSim1.RowHeadersVisible = false;
             this.dgvResultsSim1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResultsSim1.Size = new System.Drawing.Size(923, 473);
+            this.dgvResultsSim1.Size = new System.Drawing.Size(1072, 483);
             this.dgvResultsSim1.TabIndex = 0;
             // 
             // colIteration
@@ -758,6 +798,7 @@
             this.colIteration.ReadOnly = true;
             this.colIteration.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colIteration.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colIteration.Width = 66;
             // 
             // colWatch
             // 
@@ -766,6 +807,7 @@
             this.colWatch.ReadOnly = true;
             this.colWatch.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colWatch.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colWatch.Width = 65;
             // 
             // colEvent
             // 
@@ -774,6 +816,7 @@
             this.colEvent.ReadOnly = true;
             this.colEvent.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colEvent.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colEvent.Width = 66;
             // 
             // colLoadRnd
             // 
@@ -782,6 +825,7 @@
             this.colLoadRnd.ReadOnly = true;
             this.colLoadRnd.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colLoadRnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colLoadRnd.Width = 66;
             // 
             // colTimeEndLoad
             // 
@@ -790,6 +834,7 @@
             this.colTimeEndLoad.ReadOnly = true;
             this.colTimeEndLoad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colTimeEndLoad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTimeEndLoad.Width = 66;
             // 
             // colNextEndLoad
             // 
@@ -798,6 +843,7 @@
             this.colNextEndLoad.ReadOnly = true;
             this.colNextEndLoad.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colNextEndLoad.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNextEndLoad.Width = 65;
             // 
             // colTravelRnd
             // 
@@ -806,6 +852,7 @@
             this.colTravelRnd.ReadOnly = true;
             this.colTravelRnd.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colTravelRnd.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTravelRnd.Width = 66;
             // 
             // colTimeEndTravel
             // 
@@ -814,6 +861,7 @@
             this.colTimeEndTravel.ReadOnly = true;
             this.colTimeEndTravel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colTimeEndTravel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colTimeEndTravel.Width = 66;
             // 
             // colNextEndTravel
             // 
@@ -822,6 +870,7 @@
             this.colNextEndTravel.ReadOnly = true;
             this.colNextEndTravel.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colNextEndTravel.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colNextEndTravel.Width = 65;
             // 
             // colShovelStatus
             // 
@@ -830,6 +879,7 @@
             this.colShovelStatus.ReadOnly = true;
             this.colShovelStatus.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colShovelStatus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colShovelStatus.Width = 66;
             // 
             // colShovelQueue
             // 
@@ -838,6 +888,7 @@
             this.colShovelQueue.ReadOnly = true;
             this.colShovelQueue.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colShovelQueue.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colShovelQueue.Width = 66;
             // 
             // colStat1
             // 
@@ -846,6 +897,7 @@
             this.colStat1.ReadOnly = true;
             this.colStat1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colStat1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStat1.Width = 66;
             // 
             // colStat2
             // 
@@ -854,6 +906,7 @@
             this.colStat2.ReadOnly = true;
             this.colStat2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colStat2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStat2.Width = 65;
             // 
             // colStat3
             // 
@@ -862,6 +915,7 @@
             this.colStat3.ReadOnly = true;
             this.colStat3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.colStat3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.colStat3.Width = 66;
             // 
             // tabPage3
             // 
@@ -869,7 +923,7 @@
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
             this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(941, 485);
+            this.tabPage3.Size = new System.Drawing.Size(1084, 495);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "Simulación 2";
             this.tabPage3.UseVisualStyleBackColor = true;
@@ -882,7 +936,6 @@
             this.dgvResultsSim2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvResultsSim2.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResultsSim2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultsSim2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -904,7 +957,7 @@
             this.dgvResultsSim2.ReadOnly = true;
             this.dgvResultsSim2.RowHeadersVisible = false;
             this.dgvResultsSim2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResultsSim2.Size = new System.Drawing.Size(923, 473);
+            this.dgvResultsSim2.Size = new System.Drawing.Size(1072, 483);
             this.dgvResultsSim2.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn1
@@ -914,6 +967,7 @@
             this.dataGridViewTextBoxColumn1.ReadOnly = true;
             this.dataGridViewTextBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn1.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn1.Width = 76;
             // 
             // dataGridViewTextBoxColumn2
             // 
@@ -922,6 +976,7 @@
             this.dataGridViewTextBoxColumn2.ReadOnly = true;
             this.dataGridViewTextBoxColumn2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn2.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn2.Width = 77;
             // 
             // dataGridViewTextBoxColumn3
             // 
@@ -930,6 +985,7 @@
             this.dataGridViewTextBoxColumn3.ReadOnly = true;
             this.dataGridViewTextBoxColumn3.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn3.Width = 76;
             // 
             // dataGridViewTextBoxColumn4
             // 
@@ -938,6 +994,7 @@
             this.dataGridViewTextBoxColumn4.ReadOnly = true;
             this.dataGridViewTextBoxColumn4.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn4.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn4.Width = 76;
             // 
             // dataGridViewTextBoxColumn5
             // 
@@ -946,6 +1003,7 @@
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             this.dataGridViewTextBoxColumn5.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn5.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn5.Width = 77;
             // 
             // dataGridViewTextBoxColumn6
             // 
@@ -954,6 +1012,7 @@
             this.dataGridViewTextBoxColumn6.ReadOnly = true;
             this.dataGridViewTextBoxColumn6.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn6.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn6.Width = 76;
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -962,6 +1021,7 @@
             this.dataGridViewTextBoxColumn7.ReadOnly = true;
             this.dataGridViewTextBoxColumn7.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn7.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn7.Width = 76;
             // 
             // dataGridViewTextBoxColumn8
             // 
@@ -970,6 +1030,7 @@
             this.dataGridViewTextBoxColumn8.ReadOnly = true;
             this.dataGridViewTextBoxColumn8.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn8.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn8.Width = 77;
             // 
             // dataGridViewTextBoxColumn9
             // 
@@ -978,6 +1039,7 @@
             this.dataGridViewTextBoxColumn9.ReadOnly = true;
             this.dataGridViewTextBoxColumn9.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn9.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn9.Width = 76;
             // 
             // dataGridViewTextBoxColumn10
             // 
@@ -986,6 +1048,7 @@
             this.dataGridViewTextBoxColumn10.ReadOnly = true;
             this.dataGridViewTextBoxColumn10.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn10.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn10.Width = 77;
             // 
             // dataGridViewTextBoxColumn11
             // 
@@ -994,6 +1057,7 @@
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             this.dataGridViewTextBoxColumn11.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn11.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn11.Width = 76;
             // 
             // dataGridViewTextBoxColumn12
             // 
@@ -1002,6 +1066,7 @@
             this.dataGridViewTextBoxColumn12.ReadOnly = true;
             this.dataGridViewTextBoxColumn12.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn12.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn12.Width = 76;
             // 
             // dataGridViewTextBoxColumn13
             // 
@@ -1010,6 +1075,7 @@
             this.dataGridViewTextBoxColumn13.ReadOnly = true;
             this.dataGridViewTextBoxColumn13.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn13.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn13.Width = 77;
             // 
             // dataGridViewTextBoxColumn14
             // 
@@ -1018,6 +1084,7 @@
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn14.Width = 76;
             // 
             // tabPage4
             // 
@@ -1025,7 +1092,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(941, 485);
+            this.tabPage4.Size = new System.Drawing.Size(1084, 495);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Simulación 3";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -1038,7 +1105,6 @@
             this.dgvResultsSim3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dgvResultsSim3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvResultsSim3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvResultsSim3.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn15,
@@ -1060,7 +1126,7 @@
             this.dgvResultsSim3.ReadOnly = true;
             this.dgvResultsSim3.RowHeadersVisible = false;
             this.dgvResultsSim3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvResultsSim3.Size = new System.Drawing.Size(923, 473);
+            this.dgvResultsSim3.Size = new System.Drawing.Size(1072, 483);
             this.dgvResultsSim3.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn15
@@ -1070,6 +1136,7 @@
             this.dataGridViewTextBoxColumn15.ReadOnly = true;
             this.dataGridViewTextBoxColumn15.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn15.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn15.Width = 76;
             // 
             // dataGridViewTextBoxColumn16
             // 
@@ -1078,6 +1145,7 @@
             this.dataGridViewTextBoxColumn16.ReadOnly = true;
             this.dataGridViewTextBoxColumn16.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn16.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn16.Width = 77;
             // 
             // dataGridViewTextBoxColumn17
             // 
@@ -1086,6 +1154,7 @@
             this.dataGridViewTextBoxColumn17.ReadOnly = true;
             this.dataGridViewTextBoxColumn17.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn17.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn17.Width = 76;
             // 
             // dataGridViewTextBoxColumn18
             // 
@@ -1094,6 +1163,7 @@
             this.dataGridViewTextBoxColumn18.ReadOnly = true;
             this.dataGridViewTextBoxColumn18.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn18.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn18.Width = 76;
             // 
             // dataGridViewTextBoxColumn19
             // 
@@ -1102,6 +1172,7 @@
             this.dataGridViewTextBoxColumn19.ReadOnly = true;
             this.dataGridViewTextBoxColumn19.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn19.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn19.Width = 77;
             // 
             // dataGridViewTextBoxColumn20
             // 
@@ -1110,6 +1181,7 @@
             this.dataGridViewTextBoxColumn20.ReadOnly = true;
             this.dataGridViewTextBoxColumn20.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn20.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn20.Width = 76;
             // 
             // dataGridViewTextBoxColumn21
             // 
@@ -1118,6 +1190,7 @@
             this.dataGridViewTextBoxColumn21.ReadOnly = true;
             this.dataGridViewTextBoxColumn21.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn21.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn21.Width = 76;
             // 
             // dataGridViewTextBoxColumn22
             // 
@@ -1126,6 +1199,7 @@
             this.dataGridViewTextBoxColumn22.ReadOnly = true;
             this.dataGridViewTextBoxColumn22.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn22.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn22.Width = 77;
             // 
             // dataGridViewTextBoxColumn23
             // 
@@ -1134,6 +1208,7 @@
             this.dataGridViewTextBoxColumn23.ReadOnly = true;
             this.dataGridViewTextBoxColumn23.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn23.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn23.Width = 76;
             // 
             // dataGridViewTextBoxColumn24
             // 
@@ -1142,6 +1217,7 @@
             this.dataGridViewTextBoxColumn24.ReadOnly = true;
             this.dataGridViewTextBoxColumn24.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn24.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn24.Width = 77;
             // 
             // dataGridViewTextBoxColumn25
             // 
@@ -1150,6 +1226,7 @@
             this.dataGridViewTextBoxColumn25.ReadOnly = true;
             this.dataGridViewTextBoxColumn25.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn25.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn25.Width = 76;
             // 
             // dataGridViewTextBoxColumn26
             // 
@@ -1158,6 +1235,7 @@
             this.dataGridViewTextBoxColumn26.ReadOnly = true;
             this.dataGridViewTextBoxColumn26.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn26.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn26.Width = 76;
             // 
             // dataGridViewTextBoxColumn27
             // 
@@ -1166,6 +1244,7 @@
             this.dataGridViewTextBoxColumn27.ReadOnly = true;
             this.dataGridViewTextBoxColumn27.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn27.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.dataGridViewTextBoxColumn27.Width = 77;
             // 
             // dataGridViewTextBoxColumn28
             // 
@@ -1174,44 +1253,7 @@
             this.dataGridViewTextBoxColumn28.ReadOnly = true;
             this.dataGridViewTextBoxColumn28.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colTruckQuantity
-            // 
-            this.colTruckQuantity.HeaderText = "Cant. Camiones";
-            this.colTruckQuantity.Name = "colTruckQuantity";
-            this.colTruckQuantity.ReadOnly = true;
-            this.colTruckQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // colResult
-            // 
-            this.colResult.HeaderText = "% Tiempo inactivo pala";
-            this.colResult.Name = "colResult";
-            this.colResult.ReadOnly = true;
-            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            // 
-            // lblFinalWatchSim1
-            // 
-            this.lblFinalWatchSim1.AutoSize = true;
-            this.lblFinalWatchSim1.Location = new System.Drawing.Point(114, 189);
-            this.lblFinalWatchSim1.Name = "lblFinalWatchSim1";
-            this.lblFinalWatchSim1.Size = new System.Drawing.Size(0, 13);
-            this.lblFinalWatchSim1.TabIndex = 70;
-            // 
-            // lblFinalWatchSim2
-            // 
-            this.lblFinalWatchSim2.AutoSize = true;
-            this.lblFinalWatchSim2.Location = new System.Drawing.Point(378, 189);
-            this.lblFinalWatchSim2.Name = "lblFinalWatchSim2";
-            this.lblFinalWatchSim2.Size = new System.Drawing.Size(0, 13);
-            this.lblFinalWatchSim2.TabIndex = 71;
-            // 
-            // lblFinalWatchSim3
-            // 
-            this.lblFinalWatchSim3.AutoSize = true;
-            this.lblFinalWatchSim3.Location = new System.Drawing.Point(642, 189);
-            this.lblFinalWatchSim3.Name = "lblFinalWatchSim3";
-            this.lblFinalWatchSim3.Size = new System.Drawing.Size(0, 13);
-            this.lblFinalWatchSim3.TabIndex = 72;
+            this.dataGridViewTextBoxColumn28.Width = 76;
             // 
             // Form1
             // 

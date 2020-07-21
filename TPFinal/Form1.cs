@@ -186,18 +186,21 @@ namespace TPFinal
             double percentageInactivyTimeSim1 = ((previousSim1.Stat3 * 100) / previousSim1.Watch);
             this.txtInactivityPercentageSim1.Text = TruncateToFour(percentageInactivyTimeSim1).ToString();
             this.txtTravelsSim1.Text = previousSim1.Stat1.ToString();
+            this.lblFinalWatchSim1.Text = "en " + TruncateToFour(previousSim1.Watch).ToString() + " mins";
             dgvPreviousResults.Rows.Add(truckQuantitySim1, TruncateToFour(percentageInactivyTimeSim1));
             this.txtInactivityTimeSim1.Text = previousSim1.Stat3.ToString();
 
             double percentageInactivyTimeSim2 = ((previousSim2.Stat3 * 100) / previousSim2.Watch);
             this.txtInactivityPercentageSim2.Text = TruncateToFour(percentageInactivyTimeSim2).ToString();
             this.txtTravelsSim2.Text = previousSim2.Stat1.ToString();
+            this.lblFinalWatchSim2.Text = "en " + TruncateToFour(previousSim2.Watch).ToString() + " mins";
             dgvPreviousResults.Rows.Add(truckQuantitySim2, TruncateToFour(percentageInactivyTimeSim2));
             this.txtInactivityTimeSim2.Text = previousSim2.Stat3.ToString();
 
             double percentageInactivyTimeSim3 = ((previousSim3.Stat3 * 100) / previousSim3.Watch);
             this.txtInactivityPercentageSim3.Text = TruncateToFour(percentageInactivyTimeSim3).ToString();
             this.txtTravelsSim3.Text = previousSim3.Stat1.ToString();
+            this.lblFinalWatchSim3.Text = "en " + TruncateToFour(previousSim3.Watch).ToString() + " mins";
             dgvPreviousResults.Rows.Add(truckQuantitySim3, TruncateToFour(percentageInactivyTimeSim3));
             this.txtInactivityTimeSim3.Text = previousSim3.Stat3.ToString();
 
@@ -245,6 +248,9 @@ namespace TPFinal
             this.txtInactivityTimeSim1.Text = "";
             this.txtInactivityTimeSim2.Text = "";
             this.txtInactivityTimeSim3.Text = "";
+            this.lblFinalWatchSim1.Text = "";
+            this.lblFinalWatchSim2.Text = "";
+            this.lblFinalWatchSim3.Text = "";
             this.dgvResultsSim1.Rows.Clear();
         }
 

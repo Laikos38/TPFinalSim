@@ -31,6 +31,12 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtInactivityTimeSim3 = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.txtInactivityTimeSim2 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtInactivityTimeSim1 = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.txtBestResult = new System.Windows.Forms.TextBox();
@@ -51,8 +57,6 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btnCleanPreviousResults = new System.Windows.Forms.Button();
             this.dgvPreviousResults = new System.Windows.Forms.DataGridView();
-            this.colTruckQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btnSimulate = new System.Windows.Forms.Button();
             this.btnCleanParameters = new System.Windows.Forms.Button();
@@ -89,7 +93,6 @@
             this.colStat2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colStat3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabPage3 = new System.Windows.Forms.TabPage();
-            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvResultsSim2 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -105,6 +108,7 @@
             this.dataGridViewTextBoxColumn12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage4 = new System.Windows.Forms.TabPage();
             this.dgvResultsSim3 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -120,12 +124,11 @@
             this.dataGridViewTextBoxColumn26 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn27 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn28 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label5 = new System.Windows.Forms.Label();
-            this.txtInactivityTimeSim1 = new System.Windows.Forms.TextBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.txtInactivityTimeSim2 = new System.Windows.Forms.TextBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.txtInactivityTimeSim3 = new System.Windows.Forms.TextBox();
+            this.colTruckQuantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colResult = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lblFinalWatchSim1 = new System.Windows.Forms.Label();
+            this.lblFinalWatchSim2 = new System.Windows.Forms.Label();
+            this.lblFinalWatchSim3 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -137,8 +140,8 @@
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim1)).BeginInit();
             this.tabPage3.SuspendLayout();
-            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim2)).BeginInit();
+            this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim3)).BeginInit();
             this.SuspendLayout();
             // 
@@ -154,7 +157,7 @@
             this.tabControl1.Location = new System.Drawing.Point(12, 12);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(949, 511);
+            this.tabControl1.Size = new System.Drawing.Size(1092, 521);
             this.tabControl1.TabIndex = 0;
             // 
             // tabPage1
@@ -165,7 +168,7 @@
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(941, 485);
+            this.tabPage1.Size = new System.Drawing.Size(1084, 495);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Principal";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -175,6 +178,9 @@
             this.groupBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox3.Controls.Add(this.lblFinalWatchSim3);
+            this.groupBox3.Controls.Add(this.lblFinalWatchSim2);
+            this.groupBox3.Controls.Add(this.lblFinalWatchSim1);
             this.groupBox3.Controls.Add(this.label17);
             this.groupBox3.Controls.Add(this.txtInactivityTimeSim3);
             this.groupBox3.Controls.Add(this.label16);
@@ -200,16 +206,76 @@
             this.groupBox3.Controls.Add(this.label6);
             this.groupBox3.Location = new System.Drawing.Point(259, 225);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(670, 254);
+            this.groupBox3.Size = new System.Drawing.Size(813, 264);
             this.groupBox3.TabIndex = 2;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Resultados simulación actual";
+            // 
+            // label17
+            // 
+            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(578, 58);
+            this.label17.Margin = new System.Windows.Forms.Padding(6);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(124, 13);
+            this.label17.TabIndex = 69;
+            this.label17.Text = "Ac. Tiempo pala inactiva";
+            // 
+            // txtInactivityTimeSim3
+            // 
+            this.txtInactivityTimeSim3.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtInactivityTimeSim3.Location = new System.Drawing.Point(581, 80);
+            this.txtInactivityTimeSim3.Name = "txtInactivityTimeSim3";
+            this.txtInactivityTimeSim3.ReadOnly = true;
+            this.txtInactivityTimeSim3.Size = new System.Drawing.Size(120, 20);
+            this.txtInactivityTimeSim3.TabIndex = 68;
+            // 
+            // label16
+            // 
+            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(313, 58);
+            this.label16.Margin = new System.Windows.Forms.Padding(6);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(124, 13);
+            this.label16.TabIndex = 67;
+            this.label16.Text = "Ac. Tiempo pala inactiva";
+            // 
+            // txtInactivityTimeSim2
+            // 
+            this.txtInactivityTimeSim2.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtInactivityTimeSim2.Location = new System.Drawing.Point(316, 80);
+            this.txtInactivityTimeSim2.Name = "txtInactivityTimeSim2";
+            this.txtInactivityTimeSim2.ReadOnly = true;
+            this.txtInactivityTimeSim2.Size = new System.Drawing.Size(120, 20);
+            this.txtInactivityTimeSim2.TabIndex = 66;
+            // 
+            // label5
+            // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(49, 58);
+            this.label5.Margin = new System.Windows.Forms.Padding(6);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(124, 13);
+            this.label5.TabIndex = 65;
+            this.label5.Text = "Ac. Tiempo pala inactiva";
+            // 
+            // txtInactivityTimeSim1
+            // 
+            this.txtInactivityTimeSim1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txtInactivityTimeSim1.Location = new System.Drawing.Point(52, 80);
+            this.txtInactivityTimeSim1.Name = "txtInactivityTimeSim1";
+            this.txtInactivityTimeSim1.ReadOnly = true;
+            this.txtInactivityTimeSim1.Size = new System.Drawing.Size(120, 20);
+            this.txtInactivityTimeSim1.TabIndex = 64;
             // 
             // label11
             // 
             this.label11.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(489, 104);
+            this.label11.Location = new System.Drawing.Point(578, 109);
             this.label11.Margin = new System.Windows.Forms.Padding(6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(116, 13);
@@ -220,7 +286,7 @@
             // 
             this.label10.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(266, 104);
+            this.label10.Location = new System.Drawing.Point(313, 109);
             this.label10.Margin = new System.Windows.Forms.Padding(6);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(116, 13);
@@ -230,7 +296,7 @@
             // txtBestResult
             // 
             this.txtBestResult.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtBestResult.Location = new System.Drawing.Point(431, 225);
+            this.txtBestResult.Location = new System.Drawing.Point(502, 230);
             this.txtBestResult.Name = "txtBestResult";
             this.txtBestResult.ReadOnly = true;
             this.txtBestResult.Size = new System.Drawing.Size(181, 20);
@@ -241,7 +307,7 @@
             this.label15.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(281, 223);
+            this.label15.Location = new System.Drawing.Point(352, 228);
             this.label15.Margin = new System.Windows.Forms.Padding(6);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(138, 20);
@@ -252,7 +318,7 @@
             // 
             this.label14.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(489, 159);
+            this.label14.Location = new System.Drawing.Point(578, 164);
             this.label14.Margin = new System.Windows.Forms.Padding(6);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(144, 13);
@@ -262,17 +328,17 @@
             // txtTravelsSim3
             // 
             this.txtTravelsSim3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTravelsSim3.Location = new System.Drawing.Point(492, 181);
+            this.txtTravelsSim3.Location = new System.Drawing.Point(581, 186);
             this.txtTravelsSim3.Name = "txtTravelsSim3";
             this.txtTravelsSim3.ReadOnly = true;
-            this.txtTravelsSim3.Size = new System.Drawing.Size(120, 20);
+            this.txtTravelsSim3.Size = new System.Drawing.Size(56, 20);
             this.txtTravelsSim3.TabIndex = 58;
             // 
             // label13
             // 
             this.label13.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(266, 159);
+            this.label13.Location = new System.Drawing.Point(313, 164);
             this.label13.Margin = new System.Windows.Forms.Padding(6);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(144, 13);
@@ -282,17 +348,17 @@
             // txtTravelsSim2
             // 
             this.txtTravelsSim2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTravelsSim2.Location = new System.Drawing.Point(269, 181);
+            this.txtTravelsSim2.Location = new System.Drawing.Point(316, 186);
             this.txtTravelsSim2.Name = "txtTravelsSim2";
             this.txtTravelsSim2.ReadOnly = true;
-            this.txtTravelsSim2.Size = new System.Drawing.Size(120, 20);
+            this.txtTravelsSim2.Size = new System.Drawing.Size(56, 20);
             this.txtTravelsSim2.TabIndex = 56;
             // 
             // label12
             // 
             this.label12.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(35, 159);
+            this.label12.Location = new System.Drawing.Point(49, 164);
             this.label12.Margin = new System.Windows.Forms.Padding(6);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(144, 13);
@@ -302,16 +368,16 @@
             // txtTravelsSim1
             // 
             this.txtTravelsSim1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtTravelsSim1.Location = new System.Drawing.Point(38, 181);
+            this.txtTravelsSim1.Location = new System.Drawing.Point(52, 186);
             this.txtTravelsSim1.Name = "txtTravelsSim1";
             this.txtTravelsSim1.ReadOnly = true;
-            this.txtTravelsSim1.Size = new System.Drawing.Size(120, 20);
+            this.txtTravelsSim1.Size = new System.Drawing.Size(56, 20);
             this.txtTravelsSim1.TabIndex = 54;
             // 
             // txtInactivityPercentageSim3
             // 
             this.txtInactivityPercentageSim3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityPercentageSim3.Location = new System.Drawing.Point(492, 126);
+            this.txtInactivityPercentageSim3.Location = new System.Drawing.Point(581, 131);
             this.txtInactivityPercentageSim3.Name = "txtInactivityPercentageSim3";
             this.txtInactivityPercentageSim3.ReadOnly = true;
             this.txtInactivityPercentageSim3.Size = new System.Drawing.Size(120, 20);
@@ -320,7 +386,7 @@
             // txtInactivityPercentageSim2
             // 
             this.txtInactivityPercentageSim2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityPercentageSim2.Location = new System.Drawing.Point(269, 126);
+            this.txtInactivityPercentageSim2.Location = new System.Drawing.Point(316, 131);
             this.txtInactivityPercentageSim2.Name = "txtInactivityPercentageSim2";
             this.txtInactivityPercentageSim2.ReadOnly = true;
             this.txtInactivityPercentageSim2.Size = new System.Drawing.Size(120, 20);
@@ -330,7 +396,7 @@
             // 
             this.label9.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(35, 104);
+            this.label9.Location = new System.Drawing.Point(49, 109);
             this.label9.Margin = new System.Windows.Forms.Padding(6);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(116, 13);
@@ -340,7 +406,7 @@
             // txtInactivityPercentageSim1
             // 
             this.txtInactivityPercentageSim1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityPercentageSim1.Location = new System.Drawing.Point(38, 126);
+            this.txtInactivityPercentageSim1.Location = new System.Drawing.Point(52, 131);
             this.txtInactivityPercentageSim1.Name = "txtInactivityPercentageSim1";
             this.txtInactivityPercentageSim1.ReadOnly = true;
             this.txtInactivityPercentageSim1.Size = new System.Drawing.Size(120, 20);
@@ -351,7 +417,7 @@
             this.label8.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(489, 33);
+            this.label8.Location = new System.Drawing.Point(578, 38);
             this.label8.Margin = new System.Windows.Forms.Padding(6);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(146, 13);
@@ -363,7 +429,7 @@
             this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(266, 33);
+            this.label7.Location = new System.Drawing.Point(313, 38);
             this.label7.Margin = new System.Windows.Forms.Padding(6);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 13);
@@ -375,7 +441,7 @@
             this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(35, 33);
+            this.label6.Location = new System.Drawing.Point(49, 38);
             this.label6.Margin = new System.Windows.Forms.Padding(6);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 13);
@@ -390,7 +456,7 @@
             this.groupBox2.Controls.Add(this.dgvPreviousResults);
             this.groupBox2.Location = new System.Drawing.Point(6, 224);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(246, 255);
+            this.groupBox2.Size = new System.Drawing.Size(246, 265);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Resultados anteriores";
@@ -398,7 +464,7 @@
             // btnCleanPreviousResults
             // 
             this.btnCleanPreviousResults.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCleanPreviousResults.Location = new System.Drawing.Point(159, 226);
+            this.btnCleanPreviousResults.Location = new System.Drawing.Point(159, 236);
             this.btnCleanPreviousResults.Name = "btnCleanPreviousResults";
             this.btnCleanPreviousResults.Size = new System.Drawing.Size(75, 23);
             this.btnCleanPreviousResults.TabIndex = 27;
@@ -408,6 +474,9 @@
             // 
             // dgvPreviousResults
             // 
+            this.dgvPreviousResults.AllowUserToAddRows = false;
+            this.dgvPreviousResults.AllowUserToDeleteRows = false;
+            this.dgvPreviousResults.AllowUserToOrderColumns = true;
             this.dgvPreviousResults.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left)));
             this.dgvPreviousResults.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
@@ -421,24 +490,8 @@
             this.dgvPreviousResults.RowHeadersVisible = false;
             this.dgvPreviousResults.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.dgvPreviousResults.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvPreviousResults.Size = new System.Drawing.Size(228, 204);
+            this.dgvPreviousResults.Size = new System.Drawing.Size(228, 214);
             this.dgvPreviousResults.TabIndex = 9;
-            // 
-            // colTruckQuantity
-            // 
-            this.colTruckQuantity.HeaderText = "Cant. Camiones";
-            this.colTruckQuantity.Name = "colTruckQuantity";
-            this.colTruckQuantity.ReadOnly = true;
-            this.colTruckQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colTruckQuantity.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            // 
-            // colResult
-            // 
-            this.colResult.HeaderText = "% Tiempo inactivo pala";
-            this.colResult.Name = "colResult";
-            this.colResult.ReadOnly = true;
-            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
-            this.colResult.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
             // groupBox1
             // 
@@ -450,7 +503,7 @@
             this.groupBox1.Controls.Add(this.tableLayoutPanel2);
             this.groupBox1.Location = new System.Drawing.Point(6, 6);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(923, 212);
+            this.groupBox1.Size = new System.Drawing.Size(1066, 212);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Parámetros";
@@ -458,7 +511,7 @@
             // btnSimulate
             // 
             this.btnSimulate.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnSimulate.Location = new System.Drawing.Point(607, 164);
+            this.btnSimulate.Location = new System.Drawing.Point(679, 164);
             this.btnSimulate.Name = "btnSimulate";
             this.btnSimulate.Size = new System.Drawing.Size(75, 23);
             this.btnSimulate.TabIndex = 29;
@@ -469,7 +522,7 @@
             // btnCleanParameters
             // 
             this.btnCleanParameters.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.btnCleanParameters.Location = new System.Drawing.Point(762, 164);
+            this.btnCleanParameters.Location = new System.Drawing.Point(834, 164);
             this.btnCleanParameters.Name = "btnCleanParameters";
             this.btnCleanParameters.Size = new System.Drawing.Size(75, 23);
             this.btnCleanParameters.TabIndex = 28;
@@ -489,7 +542,7 @@
             this.tableLayoutPanel1.Controls.Add(this.label2, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.label4, 0, 2);
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(526, 19);
+            this.tableLayoutPanel1.Location = new System.Drawing.Point(598, 19);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 3;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -559,7 +612,7 @@
             this.tableLayoutPanel2.ColumnCount = 3;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 43.95973F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 56.04027F));
-            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 81F));
+            this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 82F));
             this.tableLayoutPanel2.Controls.Add(this.lblTo, 0, 2);
             this.tableLayoutPanel2.Controls.Add(this.txtFrom, 1, 1);
             this.tableLayoutPanel2.Controls.Add(this.lblQuantity, 0, 0);
@@ -568,7 +621,7 @@
             this.tableLayoutPanel2.Controls.Add(this.txtTo, 1, 2);
             this.tableLayoutPanel2.Controls.Add(this.label1, 0, 3);
             this.tableLayoutPanel2.Controls.Add(this.cmbGenerator, 1, 3);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(6, 19);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(78, 19);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 4;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -590,7 +643,7 @@
             // 
             // txtFrom
             // 
-            this.txtFrom.Location = new System.Drawing.Point(193, 47);
+            this.txtFrom.Location = new System.Drawing.Point(192, 47);
             this.txtFrom.Name = "txtFrom";
             this.txtFrom.Size = new System.Drawing.Size(142, 20);
             this.txtFrom.TabIndex = 3;
@@ -618,7 +671,7 @@
             // 
             // txtQuantity
             // 
-            this.txtQuantity.Location = new System.Drawing.Point(193, 3);
+            this.txtQuantity.Location = new System.Drawing.Point(192, 3);
             this.txtQuantity.Name = "txtQuantity";
             this.txtQuantity.Size = new System.Drawing.Size(145, 20);
             this.txtQuantity.TabIndex = 1;
@@ -626,7 +679,7 @@
             // 
             // txtTo
             // 
-            this.txtTo.Location = new System.Drawing.Point(193, 91);
+            this.txtTo.Location = new System.Drawing.Point(192, 91);
             this.txtTo.Name = "txtTo";
             this.txtTo.Size = new System.Drawing.Size(142, 20);
             this.txtTo.TabIndex = 5;
@@ -649,7 +702,7 @@
             this.cmbGenerator.Items.AddRange(new object[] {
             "Congruencial",
             "C#"});
-            this.cmbGenerator.Location = new System.Drawing.Point(193, 138);
+            this.cmbGenerator.Location = new System.Drawing.Point(192, 138);
             this.cmbGenerator.Name = "cmbGenerator";
             this.cmbGenerator.Size = new System.Drawing.Size(121, 21);
             this.cmbGenerator.TabIndex = 7;
@@ -821,17 +874,6 @@
             this.tabPage3.Text = "Simulación 2";
             this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // tabPage4
-            // 
-            this.tabPage4.Controls.Add(this.dgvResultsSim3);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(941, 485);
-            this.tabPage4.TabIndex = 3;
-            this.tabPage4.Text = "Simulación 3";
-            this.tabPage4.UseVisualStyleBackColor = true;
-            // 
             // dgvResultsSim2
             // 
             this.dgvResultsSim2.AllowUserToAddRows = false;
@@ -976,6 +1018,17 @@
             this.dataGridViewTextBoxColumn14.ReadOnly = true;
             this.dataGridViewTextBoxColumn14.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn14.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            // 
+            // tabPage4
+            // 
+            this.tabPage4.Controls.Add(this.dgvResultsSim3);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
+            this.tabPage4.Name = "tabPage4";
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage4.Size = new System.Drawing.Size(941, 485);
+            this.tabPage4.TabIndex = 3;
+            this.tabPage4.Text = "Simulación 3";
+            this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // dgvResultsSim3
             // 
@@ -1122,71 +1175,49 @@
             this.dataGridViewTextBoxColumn28.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.dataGridViewTextBoxColumn28.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
             // 
-            // label5
+            // colTruckQuantity
             // 
-            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(35, 53);
-            this.label5.Margin = new System.Windows.Forms.Padding(6);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(124, 13);
-            this.label5.TabIndex = 65;
-            this.label5.Text = "Ac. Tiempo pala inactiva";
+            this.colTruckQuantity.HeaderText = "Cant. Camiones";
+            this.colTruckQuantity.Name = "colTruckQuantity";
+            this.colTruckQuantity.ReadOnly = true;
+            this.colTruckQuantity.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // txtInactivityTimeSim1
+            // colResult
             // 
-            this.txtInactivityTimeSim1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityTimeSim1.Location = new System.Drawing.Point(38, 75);
-            this.txtInactivityTimeSim1.Name = "txtInactivityTimeSim1";
-            this.txtInactivityTimeSim1.ReadOnly = true;
-            this.txtInactivityTimeSim1.Size = new System.Drawing.Size(120, 20);
-            this.txtInactivityTimeSim1.TabIndex = 64;
+            this.colResult.HeaderText = "% Tiempo inactivo pala";
+            this.colResult.Name = "colResult";
+            this.colResult.ReadOnly = true;
+            this.colResult.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             // 
-            // label16
+            // lblFinalWatchSim1
             // 
-            this.label16.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(266, 53);
-            this.label16.Margin = new System.Windows.Forms.Padding(6);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(124, 13);
-            this.label16.TabIndex = 67;
-            this.label16.Text = "Ac. Tiempo pala inactiva";
+            this.lblFinalWatchSim1.AutoSize = true;
+            this.lblFinalWatchSim1.Location = new System.Drawing.Point(114, 189);
+            this.lblFinalWatchSim1.Name = "lblFinalWatchSim1";
+            this.lblFinalWatchSim1.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim1.TabIndex = 70;
             // 
-            // txtInactivityTimeSim2
+            // lblFinalWatchSim2
             // 
-            this.txtInactivityTimeSim2.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityTimeSim2.Location = new System.Drawing.Point(269, 75);
-            this.txtInactivityTimeSim2.Name = "txtInactivityTimeSim2";
-            this.txtInactivityTimeSim2.ReadOnly = true;
-            this.txtInactivityTimeSim2.Size = new System.Drawing.Size(120, 20);
-            this.txtInactivityTimeSim2.TabIndex = 66;
+            this.lblFinalWatchSim2.AutoSize = true;
+            this.lblFinalWatchSim2.Location = new System.Drawing.Point(378, 189);
+            this.lblFinalWatchSim2.Name = "lblFinalWatchSim2";
+            this.lblFinalWatchSim2.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim2.TabIndex = 71;
             // 
-            // label17
+            // lblFinalWatchSim3
             // 
-            this.label17.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(489, 53);
-            this.label17.Margin = new System.Windows.Forms.Padding(6);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(124, 13);
-            this.label17.TabIndex = 69;
-            this.label17.Text = "Ac. Tiempo pala inactiva";
-            // 
-            // txtInactivityTimeSim3
-            // 
-            this.txtInactivityTimeSim3.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txtInactivityTimeSim3.Location = new System.Drawing.Point(492, 75);
-            this.txtInactivityTimeSim3.Name = "txtInactivityTimeSim3";
-            this.txtInactivityTimeSim3.ReadOnly = true;
-            this.txtInactivityTimeSim3.Size = new System.Drawing.Size(120, 20);
-            this.txtInactivityTimeSim3.TabIndex = 68;
+            this.lblFinalWatchSim3.AutoSize = true;
+            this.lblFinalWatchSim3.Location = new System.Drawing.Point(642, 189);
+            this.lblFinalWatchSim3.Name = "lblFinalWatchSim3";
+            this.lblFinalWatchSim3.Size = new System.Drawing.Size(0, 13);
+            this.lblFinalWatchSim3.TabIndex = 72;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(973, 535);
+            this.ClientSize = new System.Drawing.Size(1116, 545);
             this.Controls.Add(this.tabControl1);
             this.MinimumSize = new System.Drawing.Size(989, 574);
             this.Name = "Form1";
@@ -1207,8 +1238,8 @@
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim1)).EndInit();
             this.tabPage3.ResumeLayout(false);
-            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim2)).EndInit();
+            this.tabPage4.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvResultsSim3)).EndInit();
             this.ResumeLayout(false);
 
@@ -1276,8 +1307,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colTruckQuantity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn colResult;
         private System.Windows.Forms.DataGridView dgvResultsSim2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -1314,6 +1343,11 @@
         private System.Windows.Forms.TextBox txtInactivityTimeSim2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtInactivityTimeSim1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTruckQuantity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colResult;
+        private System.Windows.Forms.Label lblFinalWatchSim3;
+        private System.Windows.Forms.Label lblFinalWatchSim2;
+        private System.Windows.Forms.Label lblFinalWatchSim1;
     }
 }
 
